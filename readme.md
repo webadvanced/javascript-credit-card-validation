@@ -17,4 +17,7 @@ Checks whether or not the supplied number could be a valid verification code.
 Returns the type of the card as a string. The possible types are "Visa", "MasterCard", "American Express", "Discover", "Diners Club", and "JCB". If a card isn't recognized, the return value is "Unknown".
 
 
+------
+
+
 **See tests for usage.**
