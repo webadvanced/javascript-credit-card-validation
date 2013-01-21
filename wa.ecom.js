@@ -9,7 +9,8 @@
             ax: { css: 'americanExpress', name: 'American Express' },
             discover: { css: 'discover', name: 'Discover' },
             jcb: { css: 'jcb', name: 'JCB' },
-            diners: { css: 'dinersClub', name: 'Diners Club' }
+            diners: { css: 'dinersClub', name: 'Diners Club' },
+            unknown: { css: 'unknown', name: 'unknown' }
         };
 
     ecom.trim = function( value ) {
@@ -85,7 +86,7 @@
     };
 
     wa.ecom.cardType = function( cardNumber ) {
-        return ecom.cardTypes[ cardNumber.slice( 0, 2 ) ] || "Unknown";
+        return ecom.cardTypes[ cardNumber.slice( 0, 2 ) ] || cardTypes.unknown;
     };
 
 })( window.wa || ( window.wa = {} ) );

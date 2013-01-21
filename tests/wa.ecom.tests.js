@@ -322,7 +322,7 @@ describe( 'when using wa.ecom.cardType', function() {
 	describe( 'with invalid card numbers', function() { 
 		it( 'should return Unknown for card number with letters', function() {
 			var result = wa.ecom.cardType( invalidCardNumbers.failLuhnAlpha );
-			expect( result ).toBe( 'Unknown' );
+			expect( result.name ).toBe( 'unknown' );
 		});
 	});
 });

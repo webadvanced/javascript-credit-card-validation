@@ -14,7 +14,7 @@ Checks whether or not the supplied number could be a valid verification code.
 
 ##wa.ecom.cardType##
 
-Returns the type of the card as an Object or "Unknown" as a string if the card isn't recognized. The possible types are:
+Returns the type of the card as an Object. The css and name value will be "unknown" if the card isn't recognized. The possible types are:
 
 ```javascript
 { css: 'visa', name: 'Visa' }
@@ -23,6 +23,7 @@ Returns the type of the card as an Object or "Unknown" as a string if the card i
 { css: 'discover', name: 'Discover' }
 { css: 'jcb', name: 'JCB' }
 { css: 'dinersClub', name: 'Diners Club' }
+{ css: 'unknown', name: 'unknown' }
 ```
 
 ------
