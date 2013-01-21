@@ -1,7 +1,16 @@
 (function( wa ) {
     "use strict";
 
-    var ecom = wa.ecom = {}, NUMPATTERN = /^\d+$/;
+    var ecom = wa.ecom = {}, 
+        NUMPATTERN = /^\d+$/,
+        cardTypes = {
+            visa: { css: 'visa', name: 'Visa' },
+            master: { css: 'masterCard', name: 'MasterCard' },
+            ax: { css: 'americanExpress', name: 'American Express' },
+            discover: { css: 'discover', name: 'Discover' },
+            jcb: { css: 'jcb', name: 'JCB' },
+            diners: { css: 'dinersClub', name: 'Diners Club' }
+        };
 
     ecom.trim = function( value ) {
         return ( value + "" ).replace( /^\s+|\s+$/g, "" );
@@ -31,16 +40,16 @@
         var e, t, n, r;
         t = {};
         for ( e = n = 40; n <= 49; e = ++n ) {
-            t[ e ] = "Visa";
+            t[ e ] = cardTypes.visa;
         }
 
         for ( e = r = 50; r <= 59; e = ++r ) {
-            t[ e ] = "MasterCard";
+            t[ e ] = cardTypes.master;
         }
-        t[ 34 ] = t[ 37 ] = "AmericanExpress";
-        t[ 60 ] = t[ 62 ] = t[ 64 ] = t[ 65 ] = "Discover";
-        t[ 35 ] = "JCB";
-        t[ 30 ] = t[ 36 ] = t[ 38 ] = t[ 39 ] = "DinersClub";
+        t[ 34 ] = t[ 37 ] = cardTypes.ax;
+        t[ 60 ] = t[ 62 ] = t[ 64 ] = t[ 65 ] = cardTypes.discover;
+        t[ 35 ] = cardTypes.jcb;
+        t[ 30 ] = t[ 36 ] = t[ 38 ] = t[ 39 ] = cardTypes.diners;
 
         return t;
     }();

@@ -219,102 +219,102 @@ describe( 'when using wa.ecom.cardType', function() {
 	describe( 'with valid card numbers', function() { 
 		it( 'should return Visa when passed a card number that begins with 4', function() {
 			var result = wa.ecom.cardType( validCardNumbers.visa );
-			expect( result ).toBe( 'Visa' );
+			expect( result.name ).toBe( 'Visa' );
 		});
 
 		it( 'should return Visa when passed a card number with 13 digits', function() {
 			var result = wa.ecom.cardType( '4242424242424' );
-			expect( result ).toBe( 'Visa' );
+			expect( result.name ).toBe( 'Visa' );
 		});
 
 		it( 'should return MasterCard when passed a card number that begins with 51', function() {
 			var result = wa.ecom.cardType( validCardNumbers.mastercard.one );
-			expect( result ).toBe( 'MasterCard' );
+			expect( result.name ).toBe( 'MasterCard' );
 		});
 
 		it( 'should return MasterCard when passed a card number that begins with 52', function() {
 			var result = wa.ecom.cardType( validCardNumbers.mastercard.two );
-			expect( result ).toBe( 'MasterCard' );
+			expect( result.name ).toBe( 'MasterCard' );
 		});
 
 		it( 'should return MasterCard when passed a card number that begins with 53', function() {
 			var result = wa.ecom.cardType( validCardNumbers.mastercard.three );
-			expect( result ).toBe( 'MasterCard' );
+			expect( result.name ).toBe( 'MasterCard' );
 		});
 
 		it( 'should return MasterCard when passed a card number that begins with 54', function() {
 			var result = wa.ecom.cardType( validCardNumbers.mastercard.four );
-			expect( result ).toBe( 'MasterCard' );
+			expect( result.name ).toBe( 'MasterCard' );
 		});
 
 		it( 'should return MasterCard when passed a card number that begins with 55', function() {
 			var result = wa.ecom.cardType( validCardNumbers.mastercard.five );
-			expect( result ).toBe( 'MasterCard' );
+			expect( result.name ).toBe( 'MasterCard' );
 		});
 
 		it( 'should return AmericanExpress when passed a card number that begins with 37', function() {
 			var result = wa.ecom.cardType( validCardNumbers.ax.one );
-			expect( result ).toBe( 'AmericanExpress' );
+			expect( result.name ).toBe( 'American Express' );
 		});
 
 		it( 'should return AmericanExpress when passed a card number that begins with 34', function() {
 			var result = wa.ecom.cardType( validCardNumbers.ax.two );
-			expect( result ).toBe( 'AmericanExpress' );
+			expect( result.name ).toBe( 'American Express' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 305', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.one );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 304', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.two );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 303', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.three );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 302', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.four );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 301', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.five );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 300', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.six );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 36', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.seven );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return DinersClub when passed a card number that begins with 38', function() {
 			var result = wa.ecom.cardType( validCardNumbers.dinersclub.eight );
-			expect( result ).toBe( 'DinersClub' );
+			expect( result.name ).toBe( 'Diners Club' );
 		});
 
 		it( 'should return Discover when passed a card number that begins with 6011', function() {
 			var result = wa.ecom.cardType( validCardNumbers.discover.one );
-			expect( result ).toBe( 'Discover' );
+			expect( result.name ).toBe( 'Discover' );
 		});
 
 		it( 'should return Discover when passed a card number that begins with 65', function() {
 			var result = wa.ecom.cardType( validCardNumbers.discover.two );
-			expect( result ).toBe( 'Discover' );
+			expect( result.name ).toBe( 'Discover' );
 		});
 
 		it( 'should return JCB when passed a card number that begins with 3530', function() {
 			var result = wa.ecom.cardType( validCardNumbers.jcb.one );
-			expect( result ).toBe( 'JCB' );
+			expect( result.name ).toBe( 'JCB' );
 		});
 
 	});
